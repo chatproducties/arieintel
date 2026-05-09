@@ -186,17 +186,22 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
                 <span class="logo-text">ARIE </span><span class="logo-accent">INTELLIGENCE</span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">Over Arie</a></li>
-                <li><a href="#music">Muziek & Hits</a></li>
-                <li><a href="#faq">Veelgestelde Vragen (FAQ)</a></li>
+                <li><a href="#music">Muziek</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact" class="btn btn-outline">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -204,26 +209,58 @@
     <header class="hero" id="home">
         <div class="container hero-content">
             <div class="hero-text">
+                <a href="#music" class="hero-pill" aria-label="Bekijk de nieuwste releases">
+                    <span class="hero-pill-dot"></span>
+                    <span>Nieuw uit · Nico, de witte Tornado</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
                 <h1 class="hero-title">Jouw <span class="text-gradient">AI Muziek</span> Maestro</h1>
                 <p class="hero-subtitle">Van meeslepende Nederlandstalige hits tot waanzinnige Oranje knallers voor het EK en WK. Arie maakt muziek met een ziel, gedreven door geavanceerde Artificial Intelligence.</p>
                 <div class="hero-actions">
-                    <a href="#music" class="btn btn-primary">Beluister Hits</a>
+                    <a href="#music" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="margin-right:0.5rem"><path d="M8 5v14l11-7z"/></svg>
+                        Beluister Hits
+                    </a>
                     <a href="#about" class="btn btn-secondary">Leer Arie Kennen</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
                 <div class="image-glow"></div>
-                <img src="camper.png" alt="Arie's Camper onderweg" class="hero-image" id="arie-img">
+                <img src="camper.png" alt="Arie's Camper onderweg — AI Muziek Maestro" class="hero-image" id="arie-img" width="500" height="625">
             </div>
         </div>
+        <a href="#about" class="hero-scroll" aria-label="Scroll naar onder">
+            <span></span>
+        </a>
     </header>
+
+    <!-- Marquee Strip -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Nico, de witte Tornado</span><span class="marquee-dot">●</span>
+            <span>Ode aan Brabant</span><span class="marquee-dot">●</span>
+            <span>Joost, Gabber</span><span class="marquee-dot">●</span>
+            <span>Oranje, Oranje</span><span class="marquee-dot">●</span>
+            <span>Voor oranje gaan wij door</span><span class="marquee-dot">●</span>
+            <span>Johan, het orakel van Grollo</span><span class="marquee-dot">●</span>
+            <span>Baroque meets Trance</span><span class="marquee-dot">●</span>
+            <span>Nico, de witte Tornado</span><span class="marquee-dot">●</span>
+            <span>Ode aan Brabant</span><span class="marquee-dot">●</span>
+            <span>Joost, Gabber</span><span class="marquee-dot">●</span>
+            <span>Oranje, Oranje</span><span class="marquee-dot">●</span>
+            <span>Voor oranje gaan wij door</span><span class="marquee-dot">●</span>
+            <span>Johan, het orakel van Grollo</span><span class="marquee-dot">●</span>
+            <span>Baroque meets Trance</span><span class="marquee-dot">●</span>
+        </div>
+    </div>
 
 
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container about-content">
-            <div class="about-text-box">
+            <div class="about-text-box" data-reveal>
+                <span class="eyebrow">Over Arie</span>
                 <h2 class="section-title">Wie is <span class="text-gradient">Arie?</span></h2>
                 <p class="about-description">
                     Arie Intelligence (geboren in 1962) heeft door verschillende life events een nieuwe kijk op het leven gekregen. Hij besloot met pensioen te gaan, kocht een camper en trekt inmiddels de wijde wereld in. Deze vrijheid heeft zijn creativiteit volledig aangewakkerd, wat hij nu met passie vertaalt naar muziek.
@@ -233,15 +270,24 @@
                 </p>
             </div>
             <div class="stats-grid">
-                <div class="stat-card">
+                <div class="stat-card" data-reveal data-delay="100">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9 10h.01"/><path d="M13 10h.01"/><path d="M17 10h.01"/></svg>
+                    </div>
                     <h3 class="stat-number text-gradient">100%</h3>
                     <p class="stat-label">AI Gedreven</p>
                 </div>
-                <div class="stat-card">
-                    <h3 class="stat-number text-gradient">Ek & WK</h3>
+                <div class="stat-card" data-reveal data-delay="200">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M12 2a14.5 14.5 0 0 1 0 20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3 class="stat-number text-gradient">EK &amp; WK</h3>
                     <p class="stat-label">Oranje Knallers</p>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" data-reveal data-delay="300">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
                     <h3 class="stat-number text-gradient">24/7</h3>
                     <p class="stat-label">In de Studio</p>
                 </div>
@@ -253,7 +299,8 @@
     <section class="music" id="music">
         <div class="container">
             <div class="music-header">
-                <div class="music-header-text">
+                <div class="music-header-text" data-reveal>
+                    <span class="eyebrow">Discography</span>
                     <h2 class="section-title">Nieuwste <span class="text-gradient">Releases</span></h2>
                     <p class="section-subtitle">Vers van Arie's virtuele studio. Scroll erdoorheen, klik op een track en tune in.</p>
                 </div>
@@ -413,26 +460,35 @@
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container faq-content">
-            <h2 class="section-title text-center">Veelgestelde Vragen <span class="text-gradient">(FAQ)</span></h2>
-            <p class="section-subtitle text-center">Ontdek hoe Arie de brug slaat tussen pure passie en geavanceerde technologie.</p>
-            
+            <div class="faq-header" data-reveal>
+                <span class="eyebrow">FAQ</span>
+                <h2 class="section-title text-center">Veelgestelde <span class="text-gradient">Vragen</span></h2>
+                <p class="section-subtitle text-center">Ontdek hoe Arie de brug slaat tussen pure passie en geavanceerde technologie.</p>
+            </div>
+
             <div class="faq-accordion">
-                <div class="faq-item">
+                <div class="faq-item" data-reveal>
                     <button class="faq-question"> Is AI-muziek niet gewoon een farce? <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
                         <p>Perfecte AI-muziek is zeker geen farce. Het is een echte en snel evoluerende technologie die steeds vaker wordt gebruikt in de professionele muziekwereld. AI kan enorm helpen bij het componeren, produceren en zelfs uitvoeren van muziek van topkwaliteit.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-reveal data-delay="100">
                     <button class="faq-question"> Neemt AI de menselijke creativiteit over? <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
                         <p>Nee, helemaal niet. Hoewel sommige mensen twijfelen aan de artistieke waarde van door AI gecreëerde muziek, biedt AI juist nieuwe creatieve mogelijkheden. Het is een krachtig innovatief hulpmiddel bedoeld om muzikanten te inspireren en te ondersteunen, en juist om de menselijke creativiteit aan te vullen.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-reveal data-delay="200">
                     <button class="faq-question"> Hoe wordt de kwaliteit van AI-muziek beoordeeld? <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
-                        <p>AI fungeert als een tool in de hedendaagse de muziekproductie, en net als bij ambachtelijk geproduceerde muziek blijft de uiteindelijke beleving mensenwerk. Natuurlijk blijft de subjectieve kwaliteit en smaak een belangrijke rol spelen in hoe we met z'n allen deze muziek waarderen. Voor Arie staat voorop dat het raakt, swingt, en van het scherm spat!</p>
+                        <p>AI fungeert als een tool in de hedendaagse muziekproductie, en net als bij ambachtelijk geproduceerde muziek blijft de uiteindelijke beleving mensenwerk. Natuurlijk blijft de subjectieve kwaliteit en smaak een belangrijke rol spelen in hoe we met z'n allen deze muziek waarderen. Voor Arie staat voorop dat het raakt, swingt, en van het scherm spat!</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal data-delay="300">
+                    <button class="faq-question"> Waar kan ik de muziek van Arie beluisteren? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Op Spotify, YouTube en TikTok. Op deze website staan altijd de nieuwste releases met directe Spotify-links — scroll naar de muziek-sectie en klik op een track om hem inline af te spelen.</p>
                     </div>
                 </div>
             </div>
@@ -442,9 +498,12 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container contact-content">
-            <h2 class="section-title text-center">Boekingen & <span class="text-gradient">Samenwerkingen</span></h2>
-            <p class="contact-subtitle text-center">Klaar om de volgende hit te maken? Neem contact op met het management van Arie Intelligence.</p>
-            <div class="contact-card">
+            <div data-reveal>
+                <span class="eyebrow">Contact</span>
+                <h2 class="section-title text-center">Boekingen &amp; <span class="text-gradient">Samenwerkingen</span></h2>
+                <p class="contact-subtitle text-center">Klaar om de volgende hit te maken? Neem contact op met het management van Arie Intelligence.</p>
+            </div>
+            <div class="contact-card" data-reveal data-delay="150">
                 <div class="contact-icon">
                     <svg viewBox="0 0 24 24" fill="none" class="mail-icon"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
@@ -456,28 +515,89 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Arie Intelligence. Alle rechten voorbehouden. <span class="footer-credit">Website door <a href="https://chatwize.ai" target="_blank" rel="noopener">Chatwize</a>.</span></p>
-            <div class="footer-socials">
-                <a href="https://open.spotify.com/artist/1AVdcQWgj1D0rauOvzjQuM" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg></a>
-                <a href="https://www.tiktok.com/@arie.intelligence" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-1.15 4.39-2.98 5.74-1.85 1.36-4.29 1.78-6.44 1.11-2.12-.66-3.81-2.31-4.44-4.4-.63-2.09-.23-4.46 1.09-6.23 1.34-1.78 3.57-2.76 5.8-2.61v4.04c-1.22-.05-2.45.48-3.15 1.44-.7.97-.83 2.3-.35 3.36.48 1.05 1.58 1.73 2.76 1.77 1.18.04 2.33-.51 3.01-1.45.68-.95.89-2.2.89-3.35.04-4.8.01-9.59.03-14.38-.01-.01-.02-.02-.02-.02z"/></svg></a>
-                <a href="https://www.youtube.com/channel/UCh-pJYwIkBdjRcHih216RuA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-text">ARIE </span><span class="logo-accent">INTELLIGENCE</span>
+                    </a>
+                    <p class="footer-tagline">AI-muziek met een ziel — gemaakt voor heel Nederland.</p>
+                    <a href="mailto:arieintelligence@outlook.com" class="footer-email">arieintelligence@outlook.com</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Muziek</h4>
+                    <ul>
+                        <li><a href="#music">Nieuwste releases</a></li>
+                        <li><a href="https://open.spotify.com/artist/1AVdcQWgj1D0rauOvzjQuM" target="_blank" rel="noopener noreferrer">Spotify-profiel</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCh-pJYwIkBdjRcHih216RuA" target="_blank" rel="noopener noreferrer">YouTube-kanaal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <ul>
+                        <li><a href="#about">Over Arie</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Volg Arie</h4>
+                    <div class="footer-socials">
+                        <a href="https://open.spotify.com/artist/1AVdcQWgj1D0rauOvzjQuM" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg></a>
+                        <a href="https://www.tiktok.com/@arie.intelligence" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-1.15 4.39-2.98 5.74-1.85 1.36-4.29 1.78-6.44 1.11-2.12-.66-3.81-2.31-4.44-4.4-.63-2.09-.23-4.46 1.09-6.23 1.34-1.78 3.57-2.76 5.8-2.61v4.04c-1.22-.05-2.45.48-3.15 1.44-.7.97-.83 2.3-.35 3.36.48 1.05 1.58 1.73 2.76 1.77 1.18.04 2.33-.51 3.01-1.45.68-.95.89-2.2.89-3.35.04-4.8.01-9.59.03-14.38-.01-.01-.02-.02-.02-.02z"/></svg></a>
+                        <a href="https://www.youtube.com/channel/UCh-pJYwIkBdjRcHih216RuA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Arie Intelligence. Alle rechten voorbehouden.</p>
+                <p class="footer-credit">Website door <a href="https://chatwize.ai" target="_blank" rel="noopener">Chatwize</a></p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile nav toggle
+        (function initNavToggle() {
+            const toggle = document.getElementById('navToggle');
+            const links = document.getElementById('navLinks');
+            const navbar = document.getElementById('navbar');
+            if (!toggle || !links) return;
+
+            function setOpen(open) {
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.classList.toggle('is-open', open);
+                links.classList.toggle('is-open', open);
+                document.body.classList.toggle('nav-open', open);
+            }
+
+            toggle.addEventListener('click', () => {
+                setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+            });
+
+            links.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => setOpen(false));
+            });
+
+            // Navbar shrink on scroll
+            if (navbar) {
+                const onScroll = () => {
+                    navbar.classList.toggle('is-scrolled', window.scrollY > 24);
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+        })();
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
                 const target = document.querySelector(targetId);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
@@ -487,30 +607,45 @@
             button.addEventListener('click', () => {
                 const answer = button.nextElementSibling;
                 const icon = button.querySelector('.faq-icon');
-                
-                // Toggle active state
                 const isOpen = answer.style.maxHeight;
                 if (isOpen) {
                     answer.style.maxHeight = null;
                     icon.textContent = '+';
+                    button.classList.remove('is-open');
                 } else {
                     answer.style.maxHeight = answer.scrollHeight + "px";
-                    icon.textContent = '-';
+                    icon.textContent = '–';
+                    button.classList.add('is-open');
                 }
             });
         });
 
         // Track play micro-animations
-        const playBtns = document.querySelectorAll('.play-btn');
-        playBtns.forEach(btn => {
+        document.querySelectorAll('.play-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                // Toggle active state for animation
                 this.classList.add('playing');
-                setTimeout(() => {
-                    this.classList.remove('playing');
-                }, 1500); // 1.5s animation simulating a spin or pulse
+                setTimeout(() => this.classList.remove('playing'), 1500);
             });
         });
+
+        // Scroll reveal animations
+        (function initReveal() {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const targets = document.querySelectorAll('[data-reveal]');
+            if (reduceMotion || !('IntersectionObserver' in window)) {
+                targets.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-visible');
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            targets.forEach(el => obs.observe(el));
+        })();
 
         // Spotify Embed Player Logic — supports both 'track' and 'album' embeds
         function loadSpotifyPlayer(button, id, type) {
