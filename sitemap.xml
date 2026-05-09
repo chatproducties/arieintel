@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
       <loc>https://arieintelligence.com/</loc>
-      <lastmod>2026-03-28</lastmod>
+      <lastmod>2026-05-09</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <image:image>
+         <image:loc>https://arieintelligence.com/Arieintelligence.jpeg</image:loc>
+         <image:title>Arie Intelligence — AI Muziek Maestro</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://arieintelligence.com/camper.png</image:loc>
+         <image:title>Arie's Camper onderweg</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://arieintelligence.com/Oranje%20legioen.jpg</image:loc>
+         <image:title>Voor oranje gaan wij door — Album cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://arieintelligence.com/johan.png</image:loc>
+         <image:title>Johan, het orakel van Grollo — Album cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://arieintelligence.com/baroque.jpeg</image:loc>
+         <image:title>Baroque meets Trance — Album cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d5b44d80bab45a3b30caa8b2</image:loc>
+         <image:title>Nico, de witte Tornado — Spotify cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02464096a6e4327a2295bf7ab9</image:loc>
+         <image:title>Ode aan Brabant — Spotify cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02db68ff061cfc10ab0ee6a867</image:loc>
+         <image:title>Joost, Gabber — Spotify cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0281066c044d79b06c94a81fe9</image:loc>
+         <image:title>Oranje, Oranje — Spotify cover</image:title>
+      </image:image>
    </url>
 </urlset>
