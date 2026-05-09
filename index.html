@@ -204,6 +204,7 @@
             </button>
         </div>
     </nav>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
     <!-- Hero Section -->
     <header class="hero" id="home">
@@ -562,12 +563,15 @@
             const toggle = document.getElementById('navToggle');
             const links = document.getElementById('navLinks');
             const navbar = document.getElementById('navbar');
+            const backdrop = document.getElementById('navBackdrop');
             if (!toggle || !links) return;
 
             function setOpen(open) {
                 toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
                 toggle.classList.toggle('is-open', open);
                 links.classList.toggle('is-open', open);
+                if (backdrop) backdrop.classList.toggle('is-open', open);
                 document.body.classList.toggle('nav-open', open);
             }
 
@@ -577,6 +581,16 @@
 
             links.querySelectorAll('a').forEach(a => {
                 a.addEventListener('click', () => setOpen(false));
+            });
+
+            if (backdrop) {
+                backdrop.addEventListener('click', () => setOpen(false));
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+                    setOpen(false);
+                }
             });
 
             // Navbar shrink on scroll
