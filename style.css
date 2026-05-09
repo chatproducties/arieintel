@@ -349,8 +349,28 @@ p.section-subtitle {
 /* Placeholder gradients for covers until images exist */
 .cover-1 { background: url('Oranje%20legioen.jpg') center/cover no-repeat; }
 .cover-johan { background: url('johan.png') center/cover no-repeat; }
-.cover-2 { background: linear-gradient(45deg, #0f172a, #1e293b, #ff6b00); }
+.cover-2 { background: url('baroque.jpeg') center/cover no-repeat; }
 .cover-3 { background: linear-gradient(45deg, #facc15, #ff6b00); }
+
+.track-cover.is-playing {
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.track-cover.is-playing .play-overlay {
+    display: none !important;
+}
+
+.track-cover iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 10;
+}
 
 .play-overlay {
     position: absolute;
