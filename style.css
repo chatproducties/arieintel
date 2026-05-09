@@ -311,13 +311,115 @@ p.section-subtitle {
 .music {
     padding: 8rem 0;
     background: var(--bg-base);
+    position: relative;
+    overflow: hidden;
 }
 
-.tracks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+.music::before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, var(--accent-orange-glow) 0%, rgba(10,15,24,0) 70%);
+    filter: blur(120px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.music .container { position: relative; z-index: 1; }
+
+.music-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.music-header-text { max-width: 620px; }
+.music-header .section-title { margin-bottom: 0.75rem; }
+.music-header .section-subtitle { margin: 0; max-width: none; text-align: left; }
+
+.carousel-nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.carousel-btn svg { width: 20px; height: 20px; }
+
+.carousel-btn:hover:not(:disabled) {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--accent-orange-glow);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-wrapper {
+    position: relative;
+    margin: 0 -1.5rem;
+}
+
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 1.5rem;
+    width: 1.5rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-base), transparent);
+}
+
+.carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-base), transparent);
+}
+
+.tracks-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0.5rem 1.5rem 1.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tracks-carousel::-webkit-scrollbar { display: none; }
+
+.tracks-carousel .track-card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
 }
 
 .track-card {
@@ -337,20 +439,32 @@ p.section-subtitle {
 }
 
 .track-cover {
-    height: 240px;
+    aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
+    background-color: #000;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-/* Placeholder gradients for covers until images exist */
-.cover-1 { background: url('Oranje%20legioen.jpg') center/cover no-repeat; }
-.cover-johan { background: url('johan.png') center/cover no-repeat; }
-.cover-2 { background: url('baroque.jpeg') center/cover no-repeat; }
-.cover-3 { background: linear-gradient(45deg, #facc15, #ff6b00); }
+.track-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    background: var(--accent-gradient);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    z-index: 3;
+    box-shadow: 0 4px 12px var(--accent-orange-glow);
+}
 
 .track-cover.is-playing {
     background: #000;
@@ -431,34 +545,35 @@ p.section-subtitle {
 }
 
 .track-info {
-    padding: 1.5rem;
+    padding: 1.25rem 1.25rem 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .track-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: 0.25rem;
+    line-height: 1.3;
 }
 
 .track-genre {
     color: var(--text-secondary);
-    font-size: 0.875rem;
-    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
 }
 
-.track-spotify-link {
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
+.track-info .spotify-badge {
     margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .spotify-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #1DB954; /* Spotify Green */
+    color: #1DB954;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.875rem;
@@ -659,15 +774,32 @@ p.section-subtitle {
     .stats-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-title { font-size: 2.5rem; }
     h2.section-title { font-size: 2rem; }
-    
+
     .contact-card { padding: 2rem; }
-    
+
     .footer-content {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
     }
+
+    .music { padding: 5rem 0; }
+
+    .music-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .tracks-carousel .track-card {
+        flex: 0 0 260px;
+    }
+
+    .carousel-wrapper { margin: 0 -1rem; }
+    .tracks-carousel { padding-left: 1rem; padding-right: 1rem; }
+    .carousel-wrapper::before,
+    .carousel-wrapper::after { width: 1rem; }
 }

@@ -133,73 +133,160 @@
     <!-- Music/Hits Section -->
     <section class="music" id="music">
         <div class="container">
-            <h2 class="section-title text-center">Grootste <span class="text-gradient">Hits</span></h2>
-            <p class="section-subtitle text-center">Ontdek de veelzijdigheid van Arie's tracks. Klik op play om een voorproefje te horen.</p>
-            
-            <div class="tracks-grid">
-                <!-- Track 1 -->
-                <div class="track-card">
-                    <div class="track-cover cover-1">
-                        <div class="play-overlay">
-                            <button class="play-btn" onclick="loadSpotifyPlayer(this, '4HOtJYOQEDhdznfgszFMtz')" aria-label="Play track">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h4 class="track-title">Voor oranje gaan wij door, oranje oranje</h4>
-                        <p class="track-genre">Oranje Knaller</p>
-                        <div class="track-spotify-link">
-                            <a href="https://open.spotify.com/album/4HOtJYOQEDhdznfgszFMtz?si=W47sYgWzQuOWU_ctIiVapg" target="_blank" class="spotify-badge">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
-                                Luister op Spotify
-                            </a>
-                        </div>
-                    </div>
+            <div class="music-header">
+                <div class="music-header-text">
+                    <h2 class="section-title">Nieuwste <span class="text-gradient">Releases</span></h2>
+                    <p class="section-subtitle">Vers van Arie's virtuele studio. Scroll erdoorheen, klik op een track en tune in.</p>
                 </div>
-
-                <!-- Track 2 -->
-                <div class="track-card">
-                    <div class="track-cover cover-johan">
-                        <div class="play-overlay">
-                            <button class="play-btn" onclick="loadSpotifyPlayer(this, '37uY7NChPc2HLU6HJNJ0V3')" aria-label="Play track">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h4 class="track-title">Johan, het orakel van Grollo</h4>
-                        <p class="track-genre">Arie Intelligence Band</p>
-                        <div class="track-spotify-link">
-                            <a href="https://open.spotify.com/album/37uY7NChPc2HLU6HJNJ0V3?si=-aPP_zM6Q1yMX8Bq8Xxq9w" target="_blank" class="spotify-badge">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
-                                Luister op Spotify
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Track 3 -->
-                <div class="track-card">
-                    <div class="track-cover cover-2">
-                        <div class="play-overlay">
-                            <button class="play-btn" onclick="loadSpotifyPlayer(this, '2SQP8tAYrWftLCaXwDQGa6')" aria-label="Play track">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h4 class="track-title">Baroque meets Trance, Enigma Four</h4>
-                        <p class="track-genre">Neo-Classical / Trance</p>
-                        <div class="track-spotify-link">
-                            <a href="https://open.spotify.com/album/2SQP8tAYrWftLCaXwDQGa6?si=kcz-55QRRh-gX4AW5g022Q" target="_blank" class="spotify-badge">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
-                                Luister op Spotify
-                            </a>
-                        </div>
-                    </div>
+                <div class="carousel-nav" aria-hidden="true">
+                    <button class="carousel-btn" id="carouselPrev" aria-label="Vorige tracks">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="carousel-btn" id="carouselNext" aria-label="Volgende tracks">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
                 </div>
             </div>
+
+            <div class="carousel-wrapper">
+                <div class="tracks-carousel" id="tracksCarousel">
+                    <!-- Track: Nico, de witte Tornado (NEW) -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d5b44d80bab45a3b30caa8b2');">
+                            <span class="track-badge">NIEUW</span>
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '38N2jO2EkrGJvxrRDAYWLW', 'track')" aria-label="Speel Nico, de witte Tornado af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Nico, de witte Tornado</h4>
+                            <p class="track-genre">Single</p>
+                            <a href="https://open.spotify.com/track/38N2jO2EkrGJvxrRDAYWLW" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Track: Ode aan Brabant (NEW) -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02464096a6e4327a2295bf7ab9');">
+                            <span class="track-badge">NIEUW</span>
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '5T1XpFamMxXtijGPxkGbWZ', 'track')" aria-label="Speel Ode aan Brabant af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Ode aan Brabant</h4>
+                            <p class="track-genre">Single</p>
+                            <a href="https://open.spotify.com/track/5T1XpFamMxXtijGPxkGbWZ" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Track: Joost, Gabber (NEW) -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02db68ff061cfc10ab0ee6a867');">
+                            <span class="track-badge">NIEUW</span>
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '62N1GvUvFydaTKOQhzkmnw', 'track')" aria-label="Speel Joost, Gabber af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Joost, Gabber</h4>
+                            <p class="track-genre">Single</p>
+                            <a href="https://open.spotify.com/track/62N1GvUvFydaTKOQhzkmnw" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Track: Oranje, Oranje (NEW) -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0281066c044d79b06c94a81fe9');">
+                            <span class="track-badge">NIEUW</span>
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '5Q9CKvEu00OovWWeOmZqtL', 'track')" aria-label="Speel Oranje, Oranje af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Oranje, Oranje</h4>
+                            <p class="track-genre">Oranje Knaller</p>
+                            <a href="https://open.spotify.com/track/5Q9CKvEu00OovWWeOmZqtL" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Track: Voor oranje gaan wij door -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('Oranje%20legioen.jpg');">
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '4HOtJYOQEDhdznfgszFMtz', 'album')" aria-label="Speel Voor oranje gaan wij door af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Voor oranje gaan wij door</h4>
+                            <p class="track-genre">Oranje Knaller</p>
+                            <a href="https://open.spotify.com/album/4HOtJYOQEDhdznfgszFMtz" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Track: Johan, het orakel van Grollo -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('johan.png');">
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '37uY7NChPc2HLU6HJNJ0V3', 'album')" aria-label="Speel Johan, het orakel van Grollo af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Johan, het orakel van Grollo</h4>
+                            <p class="track-genre">Arie Intelligence Band</p>
+                            <a href="https://open.spotify.com/album/37uY7NChPc2HLU6HJNJ0V3" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Track: Baroque meets Trance -->
+                    <article class="track-card">
+                        <div class="track-cover" style="background-image: url('baroque.jpeg');">
+                            <div class="play-overlay">
+                                <button class="play-btn" onclick="loadSpotifyPlayer(this, '2SQP8tAYrWftLCaXwDQGa6', 'album')" aria-label="Speel Baroque meets Trance af">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Baroque meets Trance</h4>
+                            <p class="track-genre">Neo-Classical / Trance</p>
+                            <a href="https://open.spotify.com/album/2SQP8tAYrWftLCaXwDQGa6" target="_blank" rel="noopener noreferrer" class="spotify-badge">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.2 11.4c-3.84-2.28-10.2-2.52-13.8-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.2-1.2 11.16-.96 15.6 1.68.54.36.72 1.02.42 1.56-.36.48-1.02.66-1.56.3z"/></svg>
+                                Beluister op Spotify
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -306,18 +393,18 @@
             });
         });
 
-        // Spotify Embed Player Logic
-        function loadSpotifyPlayer(button, albumId) {
+        // Spotify Embed Player Logic — supports both 'track' and 'album' embeds
+        function loadSpotifyPlayer(button, id, type) {
+            type = type || 'album';
             const card = button.closest('.track-card');
             const cover = card.querySelector('.track-cover');
-            
-            // Show loading state
+
+            cover.style.backgroundImage = 'none';
             cover.style.background = '#000';
             cover.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100%;color:var(--accent-orange);font-family:sans-serif;">Laden...</div>';
 
-            // Create iframe
             const iframe = document.createElement('iframe');
-            iframe.src = `https://open.spotify.com/embed/album/${albumId}?utm_source=generator&theme=0`;
+            iframe.src = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator&theme=0`;
             iframe.width = "100%";
             iframe.height = "100%";
             iframe.frameBorder = "0";
@@ -325,14 +412,46 @@
             iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
             iframe.loading = "lazy";
             iframe.style.borderRadius = "var(--radius-md)";
-            
-            // Clear cover and append iframe
+
             setTimeout(() => {
                 cover.innerHTML = '';
                 cover.appendChild(iframe);
                 cover.classList.add('is-playing');
             }, 300);
         }
+
+        // Carousel scroll controls
+        (function initCarousel() {
+            const carousel = document.getElementById('tracksCarousel');
+            const prevBtn = document.getElementById('carouselPrev');
+            const nextBtn = document.getElementById('carouselNext');
+            if (!carousel || !prevBtn || !nextBtn) return;
+
+            function step() {
+                const card = carousel.querySelector('.track-card');
+                if (!card) return 320;
+                const style = getComputedStyle(carousel);
+                const gap = parseFloat(style.columnGap || style.gap || 0) || 0;
+                return card.getBoundingClientRect().width + gap;
+            }
+
+            function updateButtons() {
+                const max = carousel.scrollWidth - carousel.clientWidth - 2;
+                prevBtn.disabled = carousel.scrollLeft <= 2;
+                nextBtn.disabled = carousel.scrollLeft >= max;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -step(), behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: step(), behavior: 'smooth' });
+            });
+
+            carousel.addEventListener('scroll', updateButtons, { passive: true });
+            window.addEventListener('resize', updateButtons);
+            updateButtons();
+        })();
     </script>
 </body>
 </html>
