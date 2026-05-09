@@ -739,6 +739,25 @@ p.section-subtitle {
     transform: scale(1.1);
 }
 
+.footer-credit {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.footer-credit a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+    transition: var(--transition-fast);
+}
+
+.footer-credit a:hover {
+    color: var(--accent-orange);
+    border-bottom-color: var(--accent-orange);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero-content, .about-content {
