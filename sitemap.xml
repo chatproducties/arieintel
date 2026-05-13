@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
       <loc>https://arieintelligence.com/</loc>
-      <lastmod>2026-05-09</lastmod>
+      <lastmod>2026-05-13</lastmod>
       <image:image>
          <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02afdd9775096cb435f6e3ac8f</image:loc>
          <image:title>Vamos — Spotify cover</image:title>
@@ -25,6 +25,10 @@
       <image:image>
          <image:loc>https://arieintelligence.com/johan.png</image:loc>
          <image:title>Johan, het orakel van Grollo — Album cover</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://arieintelligence.com/baroque-enigma-one.jpeg</image:loc>
+         <image:title>Baroque meets Trance, Enigma One — Album cover</image:title>
       </image:image>
       <image:image>
          <image:loc>https://arieintelligence.com/baroque.jpeg</image:loc>
