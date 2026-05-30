@@ -3,13 +3,25 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
       <loc>https://arieintelligence.com/</loc>
-      <lastmod>2026-05-13</lastmod>
+      <lastmod>2026-05-30</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+      <image:image>
+         <image:loc>https://arieintelligence.com/usaherewecome.jpeg</image:loc>
+         <image:title>USA, Canada, Mexico, here we go — WK 2026 Oranje lied</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0281066c044d79b06c94a81fe9</image:loc>
+         <image:title>Oranje, Oranje — WK 2026 Oranje knaller</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://arieintelligence.com/Oranje%20legioen.jpg</image:loc>
+         <image:title>Voor oranje gaan wij door — WK 2026 Album cover</image:title>
+      </image:image>
       <image:image>
          <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02afdd9775096cb435f6e3ac8f</image:loc>
          <image:title>Vamos — Spotify cover</image:title>
       </image:image>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
       <image:image>
          <image:loc>https://arieintelligence.com/Arieintelligence.jpeg</image:loc>
          <image:title>Arie Intelligence — AI Muziek Maestro</image:title>
@@ -17,10 +29,6 @@
       <image:image>
          <image:loc>https://arieintelligence.com/camper.png</image:loc>
          <image:title>Arie's Camper onderweg</image:title>
-      </image:image>
-      <image:image>
-         <image:loc>https://arieintelligence.com/Oranje%20legioen.jpg</image:loc>
-         <image:title>Voor oranje gaan wij door — Album cover</image:title>
       </image:image>
       <image:image>
          <image:loc>https://arieintelligence.com/johan.png</image:loc>
@@ -45,10 +53,6 @@
       <image:image>
          <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02db68ff061cfc10ab0ee6a867</image:loc>
          <image:title>Joost, Gabber — Spotify cover</image:title>
-      </image:image>
-      <image:image>
-         <image:loc>https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0281066c044d79b06c94a81fe9</image:loc>
-         <image:title>Oranje, Oranje — Spotify cover</image:title>
       </image:image>
    </url>
 </urlset>
