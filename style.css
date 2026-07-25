@@ -1055,6 +1055,176 @@ p.section-subtitle {
     text-shadow: 0 0 8px rgba(29, 185, 84, 0.4);
 }
 
+/* Kanaal / 3D Section */
+.channel {
+    padding: 6rem 0;
+    background: var(--bg-base);
+}
+
+.channel-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(160deg, #0d1320 0%, #070b12 100%);
+    border: 1px solid rgba(255,255,255,0.07);
+    box-shadow: 0 28px 64px rgba(0,0,0,0.5);
+    min-height: 460px;
+}
+
+/* Spotlight that follows the cursor */
+.channel-spotlight {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    left: var(--spot-x, 30%);
+    top: var(--spot-y, 10%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at center,
+                rgba(255, 138, 40, 0.30) 0%,
+                rgba(245, 158, 11, 0.12) 45%,
+                rgba(255, 107, 0, 0) 72%);
+    filter: blur(28px);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+.channel-card.is-lit .channel-spotlight { opacity: 1; }
+
+.channel-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 460px;
+}
+
+.channel-text { padding: 3rem; }
+
+.channel-text .section-title { margin-bottom: 1rem; }
+
+.channel-lead {
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+}
+
+.channel-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.channel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: var(--transition-smooth);
+}
+
+.channel-btn svg { flex-shrink: 0; }
+
+.channel-btn:hover {
+    transform: translateY(-3px);
+    border-color: transparent;
+}
+
+.channel-btn-yt:hover { background: #ff0033; color: #fff; box-shadow: 0 10px 26px rgba(255, 0, 51, 0.35); }
+.channel-btn-sp:hover { background: #1DB954; color: #fff; box-shadow: 0 10px 26px rgba(29, 185, 84, 0.35); }
+.channel-btn-tt:hover { background: #fff; color: #111; box-shadow: 0 10px 26px rgba(255, 255, 255, 0.25); }
+
+/* Visual / 3D area */
+.channel-visual {
+    position: relative;
+    align-self: stretch;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.channel-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.9;
+    mask-image: linear-gradient(to right, transparent, #000 22%);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 22%);
+    transition: opacity 0.6s ease;
+}
+
+/* Once the 3D scene is live, fade the still image out */
+.channel-visual.has-3d .channel-fallback { opacity: 0; pointer-events: none; }
+
+.channel-visual spline-viewer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.channel-visual.is-ready spline-viewer { opacity: 1; }
+
+.channel-loader {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border: 3px solid rgba(255,255,255,0.15);
+    border-top-color: var(--accent-orange);
+    border-radius: 50%;
+    opacity: 0;
+    animation: channel-spin 0.9s linear infinite;
+}
+
+.channel-visual.is-loading .channel-loader { opacity: 1; }
+
+@keyframes channel-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 992px) {
+    .channel-inner {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+    .channel-card { min-height: 0; }
+    .channel-text { padding: 2.5rem 2rem; }
+    .channel-visual {
+        order: -1;
+        min-height: 260px;
+        max-height: 300px;
+    }
+    .channel-fallback {
+        mask-image: linear-gradient(to bottom, #000 55%, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    }
+}
+
+@media (max-width: 560px) {
+    .channel { padding: 4rem 0; }
+    .channel-text { padding: 2rem 1.4rem 2.25rem; }
+    .channel-lead { font-size: 1rem; margin-bottom: 1.6rem; }
+    .channel-visual { min-height: 210px; max-height: 230px; }
+    .channel-actions { gap: 0.6rem; }
+    .channel-btn { flex: 1 1 auto; justify-content: center; padding: 0.7rem 1rem; }
+}
+
 /* FAQ Section */
 .faq {
     padding: 8rem 0;
